@@ -1,5 +1,5 @@
 // AnalyzeCtl_dlg.cpp : implementation file
-// added comment
+// removed comment
 
 #include "stdafx.h"
 #include "winprom.h"
