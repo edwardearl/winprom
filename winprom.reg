@@ -1,0 +1,46 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+HKEY_CLASSES_ROOT\.hgt = SRTM.height
+HKEY_CLASSES_ROOT\SRTM.height = SRTM DEM
+HKEY_CLASSES_ROOT\SRTM.height\DefaultIcon = c:\winprom\winprom.exe,5
+
+HKEY_CLASSES_ROOT\.dem = USGS.dem
+HKEY_CLASSES_ROOT\USGS.dem = USGS/GTOPO30 DEM
+HKEY_CLASSES_ROOT\USGS.dem\DefaultIcon = c:\winprom\winprom.exe,5
+
+HKEY_CLASSES_ROOT\.elv = Elev.map
+HKEY_CLASSES_ROOT\Elev.map = Elevation map
+HKEY_CLASSES_ROOT\Elev.map\DefaultIcon = c:\winprom\winprom.exe,5
+HKEY_CLASSES_ROOT\Elev.map\shell\open_with_winprom = Open with Winprom
+HKEY_CLASSES_ROOT\Elev.map\shell\open_with_winprom\command = c:\winprom\WINPROM.EXE %1
+
+HKEY_CLASSES_ROOT\.domap = domain.map
+HKEY_CLASSES_ROOT\domain.map = Domain map
+HKEY_CLASSES_ROOT\domain.map\DefaultIcon = c:\winprom\winprom.exe,0
+HKEY_CLASSES_ROOT\domain.map\shell\open_with_winprom = Open with Winprom
+HKEY_CLASSES_ROOT\domain.map\shell\open_with_winprom\command = c:\winprom\WINPROM.EXE %1
+
+HKEY_CLASSES_ROOT\.divt = divide.tree
+HKEY_CLASSES_ROOT\divide.tree = Divide tree
+HKEY_CLASSES_ROOT\divide.tree\DefaultIcon = c:\winprom\winprom.exe,1
+HKEY_CLASSES_ROOT\divide.tree\shell\open_with_winprom = Open with Winprom
+HKEY_CLASSES_ROOT\divide.tree\shell\open_with_winprom\command = c:\winprom\WINPROM.EXE %1
+
+HKEY_CLASSES_ROOT\.wpd = Winprom.data
+HKEY_CLASSES_ROOT\Winprom.data = Winprom database
+HKEY_CLASSES_ROOT\Winprom.data\DefaultIcon = c:\winprom\winprom.exe,15
+HKEY_CLASSES_ROOT\Winprom.data\shell\open_with_winprom = Open with Winprom
+HKEY_CLASSES_ROOT\Winprom.data\shell\open_with_winprom\command = c:\winprom\WINPROM.EXE %1
+
+HKEY_CLASSES_ROOT\.wps = Winprom.script
+HKEY_CLASSES_ROOT\Winprom.script = Winprom script
+HKEY_CLASSES_ROOT\Winprom.script\DefaultIcon = c:\winprom\winprom.exe,0
+HKEY_CLASSES_ROOT\Winprom.script\shell = open_with_winprom
+HKEY_CLASSES_ROOT\Winprom.script\shell\open_with_winprom = Open with Winprom
+HKEY_CLASSES_ROOT\Winprom.script\shell\open_with_winprom\command = c:\winprom\WINPROM.EXE %1
+HKEY_CLASSES_ROOT\Winprom.script\shell\open_with_notepad = Open with Notepad
+HKEY_CLASSES_ROOT\Winprom.script\shell\open_with_notepad\command = notepad.EXE %1

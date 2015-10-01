@@ -1,0 +1,153 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: winprom - Win32 Distribute--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Distribute/winprom.res" /d "NDEBUG" "C:\Documents and Settings\Edward Earl\My Documents\code\prominence\winprom\winprom.rc"" 
+Creating temporary file "C:\DOCUME~1\EDWARD~1\LOCALS~1\Temp\RSP1E.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "io_support" /Fp"Distribute/winprom.pch" /Yu"stdafx.h" /Fo"Distribute/" /Fd"Distribute/" /FD /c 
+"C:\Documents and Settings\Edward Earl\My Documents\code\prominence\winprom\BrowseFormat_dlg.cpp"
+"C:\Documents and Settings\Edward Earl\My Documents\code\prominence\winprom\Domain.cpp"
+"C:\Documents and Settings\Edward Earl\My Documents\code\prominence\winprom\GraphView.cpp"
+"C:\Documents and Settings\Edward Earl\My Documents\code\prominence\winprom\winprom.cpp"
+]
+Creating command line "C:\Program Files\Microsoft Visual Studio\VC98\bin\cl.exe @C:\DOCUME~1\EDWARD~1\LOCALS~1\Temp\RSP1E.tmp" 
+Creating temporary file "C:\DOCUME~1\EDWARD~1\LOCALS~1\Temp\RSP21.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Distribute/winprom.pdb" /machine:I386 /out:"Distribute/winprom.exe" 
+".\Distribute\AnalyzeCtl_dlg.obj"
+".\Distribute\Assoc_dlg.obj"
+".\Distribute\BackgdTask_dlg.obj"
+".\Distribute\BasinSadlListView.obj"
+".\Distribute\BrowseFormat_dlg.obj"
+".\Distribute\ColorBox.obj"
+".\Distribute\Contour_dlg.obj"
+".\Distribute\Crop_dlg.obj"
+".\Distribute\CutoffOnly_dlg.obj"
+".\Distribute\CycleListView.obj"
+".\Distribute\CycleSadl_dlg.obj"
+".\Distribute\Data_dlg.obj"
+".\Distribute\DataAlign_dlg.obj"
+".\Distribute\Database.obj"
+".\Distribute\DataFilter_dlg.obj"
+".\Distribute\DataFrame.obj"
+".\Distribute\DataImport_dlg.obj"
+".\Distribute\DataInfo_dlg.obj"
+".\Distribute\DataListSummary_dlg.obj"
+".\Distribute\DataListView.obj"
+".\Distribute\DataLocationFilter_dlg.obj"
+".\Distribute\DefineFlat_dlg.obj"
+".\Distribute\Domain.obj"
+".\Distribute\Domain_anal.obj"
+".\Distribute\DomainView_dlg.obj"
+".\Distribute\DomapInfo_dlg.obj"
+".\Distribute\ElevColor_dlg.obj"
+".\Distribute\ElevConflict_dlg.obj"
+".\Distribute\ElevMapInfo_dlg.obj"
+".\Distribute\ElevRect_dlg.obj"
+".\Distribute\ErrorAnal_dlg.obj"
+".\Distribute\ErrorFilter_dlg.obj"
+".\Distribute\ErrorListView.obj"
+".\Distribute\ErrorParam_dlg.obj"
+".\Distribute\FeatureEdit_dlg.obj"
+".\Distribute\FeatureFilter_dlg.obj"
+".\Distribute\FeatureFmt_dlg.obj"
+".\Distribute\FeatureListSummary_dlg.obj"
+".\Distribute\FeatureListView.obj"
+".\Distribute\FeatureTypeFilter_dlg.obj"
+".\Distribute\FeatureView_dlg.obj"
+".\Distribute\Fields_dlg.obj"
+".\Distribute\FreeHeight_dlg.obj"
+".\Distribute\FreeHeightParam_dlg.obj"
+".\Distribute\GenericListView.obj"
+".\Distribute\GraphFrame.obj"
+".\Distribute\GraphView.obj"
+".\Distribute\Grid.obj"
+".\Distribute\GridPoint.obj"
+".\Distribute\GridPointFilter_dlg.obj"
+".\Distribute\GridView_dlg.obj"
+".\Distribute\GroupListView.obj"
+".\Distribute\IdentifyFeature_dlg.obj"
+".\Distribute\Imparam_dlg.obj"
+".\Distribute\ImpOut_dlg.obj"
+".\Distribute\ListFilter_dlg.obj"
+".\Distribute\ListFrame.obj"
+".\Distribute\ListSadl_dlg.obj"
+".\Distribute\LocationFmt_dlg.obj"
+".\Distribute\LPRtreeView.obj"
+".\Distribute\MapInfo_dlg.obj"
+".\Distribute\MapView.obj"
+".\Distribute\NoiseSum_dlg.obj"
+".\Distribute\ParentListView.obj"
+".\Distribute\ParentType_dlg.obj"
+".\Distribute\PeakListView.obj"
+".\Distribute\PeakNbrListView.obj"
+".\Distribute\Point.obj"
+".\Distribute\PrintMap_dlg.obj"
+".\Distribute\ProfileFrame.obj"
+".\Distribute\ProfileParam_dlg.obj"
+".\Distribute\ProfileView.obj"
+".\Distribute\PromCutoff_dlg.obj"
+".\Distribute\PromDoc.obj"
+".\Distribute\PromFrame.obj"
+".\Distribute\PromRulerBar.obj"
+".\Distribute\PromSadl_dlg.obj"
+".\Distribute\PromSadlListView.obj"
+".\Distribute\Purge_dlg.obj"
+".\Distribute\PurgeDomain_dlg.obj"
+".\Distribute\PurgeNoise_dlg.obj"
+".\Distribute\Relief_dlg.obj"
+".\Distribute\RidgeView_dlg.obj"
+".\Distribute\RQFinfo_dlg.obj"
+".\Distribute\RulerBar.obj"
+".\Distribute\RunoffList_dlg.obj"
+".\Distribute\RunoffListView.obj"
+".\Distribute\RunoffNbr_dlg.obj"
+".\Distribute\RunoffNbrListView.obj"
+".\Distribute\SaddleListView.obj"
+".\Distribute\SaddleWalkInvView.obj"
+".\Distribute\Scale_dlg.obj"
+".\Distribute\ScriptCtl_dlg.obj"
+".\Distribute\SetLocation_dlg.obj"
+".\Distribute\SetProfile_dlg.obj"
+".\Distribute\Shoreline_dlg.obj"
+".\Distribute\Splash.obj"
+".\Distribute\StatOptions_dlg.obj"
+".\Distribute\StdAfx.obj"
+".\Distribute\SWI_dlg.obj"
+".\Distribute\Transform_dlg.obj"
+".\Distribute\TransformTree_dlg.obj"
+".\Distribute\TransPal_dlg.obj"
+".\Distribute\TreeFilter_dlg.obj"
+".\Distribute\TreeFrame.obj"
+".\Distribute\TreeInfo_dlg.obj"
+".\Distribute\TreePaste_dlg.obj"
+".\Distribute\TreeSelectFilter_dlg.obj"
+".\Distribute\WalkListView.obj"
+".\Distribute\winprom.obj"
+".\Distribute\WSinfo_dlg.obj"
+".\Distribute\XferTree_dlg.obj"
+".\Distribute\winprom.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\EDWARD~1\LOCALS~1\Temp\RSP21.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+BrowseFormat_dlg.cpp
+Domain.cpp
+GraphView.cpp
+winprom.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+winprom.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

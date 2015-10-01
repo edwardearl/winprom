@@ -1,0 +1,24 @@
+Onmap saddle prom {
+  initialize topology & undefine saddle prom
+  sort peaks
+  for each peak in sorted order {
+    find parent & saddle
+    set prom for saddles that might be LIS
+    reverse path on near side of saddle
+  }
+}
+
+Offmap saddle prom {
+  initialize topology & undefine saddle prom
+  for each runoff {
+    find other runoff & saddle
+    set infinite prom for saddles that might be LIS
+    reverse path on near side of saddle
+  }
+  sort peaks
+  for each peak in sorted order {
+    find parent & saddle
+    set prom for saddles that might be LIS
+    reverse path on near side of saddle
+  }
+}

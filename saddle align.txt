@@ -1,0 +1,36 @@
+if (cycle is entirely within radius) {
+  // it's ineligible
+}
+else if (rival is a prom saddle) {
+  if (rival is on cycle) {
+    // rival is in series.
+    low saddle wins.
+  }
+  else {
+    // 3-way.
+    if (topology is enabled) {
+      use it
+    }
+    else {
+      use depth, or presume the prom saddle
+    }
+  }
+}
+else if (rival is a basin saddle) {
+  if (rotation on one saddle could confine the other's cycle within the radius) {
+    // rival is in parallel.
+    high saddle wins.
+  }
+  else {
+    // 3-way.
+    if (topology is enabled) {
+      use it
+    }
+    else {
+      use depth
+    }
+  }
+}
+else {
+  // there is no rival
+}

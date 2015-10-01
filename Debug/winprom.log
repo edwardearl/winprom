@@ -1,0 +1,232 @@
+﻿Build started 10/16/2014 7:47:54 PM.
+     1>Project "C:\Users\esquared\Documents\code\prominence\winprom\winprom.vcxproj" on node 2 (ClCompile target(s)).
+     1>ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _DEBUG /D administrator /D WIN32 /D _WINDOWS /D io_support /D _VC80_UPGRADE=0x0600 /D _AFXDLL /Gm /EHsc /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\winprom.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt PromDoc.cpp
+         PromDoc.cpp
+     1>c:\users\esquared\documents\code\prominence\winprom\file.h(18): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(157) : see declaration of 'strerror'
+     1>c:\users\esquared\documents\code\prominence\winprom\file.h(34): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\file.h(41): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(81): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(82): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(83): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(84): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(89): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(90): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(136): warning C4244: 'return' : conversion from 'const double' to 'Distance', possible loss of data
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(138): warning C4244: 'return' : conversion from 'const double' to 'Distance', possible loss of data
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(219): warning C4244: 'return' : conversion from 'const double' to 'GridPoint_cart::Coord', possible loss of data
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(227): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\gridpoint.h(229): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\interval.h(82): warning C4244: '=' : conversion from 'long' to 'Elevation', possible loss of data
+     1>c:\users\esquared\documents\code\prominence\winprom\database.h(35): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\database.h(36): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\database.h(95): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\point.h(78): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\point.h(79): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\point.h(63): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : see declaration of 'strdup'
+     1>c:\users\esquared\documents\code\prominence\winprom\point.h(66): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : see declaration of 'strdup'
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(92): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(93): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(199): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(200): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(303): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(304): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(368): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(369): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(414): warning C4114: same type qualifier used more than once
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(550): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(588): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(589): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(590): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\domain.h(591): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(45): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+                 c:\users\esquared\documents\code\prominence\winprom\grid_map.h(80) : see reference to class template instantiation 'Map_cart<T>' being compiled
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(46): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(47): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(48): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(56): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(58): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(60): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(62): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(64): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(76): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(77): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(78): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(79): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(92): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(158): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(172): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(185): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(193): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(201): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(220): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(237): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(244): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\erroranal_dlg.h(15): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(45): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+                 c:\users\esquared\documents\code\prominence\winprom\promdoc.h(105) : see reference to class template instantiation 'Map_cart<T>' being compiled
+                 with
+                 [
+                     T=Elevation
+                 ]
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(46): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(47): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(48): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(56): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(58): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(60): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(62): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(64): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(76): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(77): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(78): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(79): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(45): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+                 c:\users\esquared\documents\code\prominence\winprom\promdoc.h(106) : see reference to class template instantiation 'Map_cart<T>' being compiled
+                 with
+                 [
+                     T=Domain::Index
+                 ]
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(46): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(47): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(48): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(56): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(58): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(60): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(62): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(64): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(76): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(77): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(78): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(79): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.h(143): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.h(151): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(157) : see declaration of 'strerror'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(495): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(501): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(511): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(611): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(623): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(665): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(872): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1239): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1242): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1243): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1322): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1334): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1434): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1506): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1518): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1594): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1667): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1762): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(1766): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2191): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2317): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2339): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2352): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2407): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2449): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2651): error C2664: 'bool Divide_tree::splice(rROiter &)' : cannot convert parameter 1 from 'Runoff *' to 'rROiter &'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2988): error C2662: 'CPromDoc::em_CanClose' : cannot convert 'this' pointer from 'const CPromDoc' to 'CPromDoc &'
+                 Conversion loses qualifiers
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(2997): error C2662: 'CPromDoc::dm_CanClose' : cannot convert 'this' pointer from 'const CPromDoc' to 'CPromDoc &'
+                 Conversion loses qualifiers
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(3006): error C2662: 'CPromDoc::dt_CanClose' : cannot convert 'this' pointer from 'const CPromDoc' to 'CPromDoc &'
+                 Conversion loses qualifiers
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(3022): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(3027): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(3035): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(4128): error C2678: binary '==' : no operator found which takes a left-hand operand of type 'Database::FieldID' (or there is no acceptable conversion)
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(470): could be 'bool std::operator ==(const std::_Exception_ptr &,const std::_Exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(475): or       'bool std::operator ==(std::_Null_type,const std::_Exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(481): or       'bool std::operator ==(const std::_Exception_ptr &,std::_Null_type)'
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\guiddef.h(192): or       'int operator ==(const GUID &,const GUID &)'
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\propkeydef.h(32): or       'int operator ==(const PROPERTYKEY &,const PROPERTYKEY &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector(200): or       'bool std::_Vector_const_iterator<_Myvec>::operator ==(const std::_Vector_const_iterator<_Myvec> &) const'
+                 with
+                 [
+                     _Myvec=std::_Vector_val<Field,std::allocator<Field>>
+                 ]
+                 while trying to match the argument list '(Database::FieldID, int)'
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(45): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+                 c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(4239) : see reference to class template instantiation 'Map_cart<T>' being compiled
+                 with
+                 [
+                     T=bool
+                 ]
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(46): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(47): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(48): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(56): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(58): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(60): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(62): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(64): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(76): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(77): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(78): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\grid_map.h(79): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(4704): error C2451: conditional expression of type 'Database::FieldID' is illegal
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(4709): error C2451: conditional expression of type 'Database::FieldID' is illegal
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(4730): error C2678: binary '==' : no operator found which takes a left-hand operand of type 'Database::FieldID' (or there is no acceptable conversion)
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(470): could be 'bool std::operator ==(const std::_Exception_ptr &,const std::_Exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(475): or       'bool std::operator ==(std::_Null_type,const std::_Exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(481): or       'bool std::operator ==(const std::_Exception_ptr &,std::_Null_type)'
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\guiddef.h(192): or       'int operator ==(const GUID &,const GUID &)'
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\propkeydef.h(32): or       'int operator ==(const PROPERTYKEY &,const PROPERTYKEY &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector(200): or       'bool std::_Vector_const_iterator<_Myvec>::operator ==(const std::_Vector_const_iterator<_Myvec> &) const'
+                 with
+                 [
+                     _Myvec=std::_Vector_val<Field,std::allocator<Field>>
+                 ]
+                 while trying to match the argument list '(Database::FieldID, int)'
+     1>c:\users\esquared\documents\code\prominence\winprom\promdoc.cpp(4730): error C2678: binary '==' : no operator found which takes a left-hand operand of type 'Database::FieldID' (or there is no acceptable conversion)
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(470): could be 'bool std::operator ==(const std::_Exception_ptr &,const std::_Exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(475): or       'bool std::operator ==(std::_Null_type,const std::_Exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\exception(481): or       'bool std::operator ==(const std::_Exception_ptr &,std::_Null_type)'
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\guiddef.h(192): or       'int operator ==(const GUID &,const GUID &)'
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\propkeydef.h(32): or       'int operator ==(const PROPERTYKEY &,const PROPERTYKEY &)'
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\vector(200): or       'bool std::_Vector_const_iterator<_Myvec>::operator ==(const std::_Vector_const_iterator<_Myvec> &) const'
+                 with
+                 [
+                     _Myvec=std::_Vector_val<Field,std::allocator<Field>>
+                 ]
+                 while trying to match the argument list '(Database::FieldID, int)'
+     1>Done Building Project "C:\Users\esquared\Documents\code\prominence\winprom\winprom.vcxproj" (ClCompile target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:06.15

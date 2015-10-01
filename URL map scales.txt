@@ -1,0 +1,109 @@
+Topozone: scale is consistently based on 250 pix/inch.
+Scales available:
+
+10K
+24K
+25K
+50K
+63K in AK
+100K
+200K
+250K
+500K
+1000K
+
+
+ESRI doesn't work
+
+
+Terraserver (both topo map and aerial photo):
+# of m/pix is totally accurate for both map and photo.
+Scales available:
+
+1   m/pix available only for aerial photo
+2   m/pix
+4   m/pix
+8   m/pix
+16  m/pix
+32  m/pix
+64  m/pix
+128 m/pix
+256 m/pix
+512 m/pix
+
+
+MapQuest street map: tool tip zoom is URL zoom plus 1
+
+URL
+zoom	m/pix
+9	2.083
+8	4.839
+7	10.53
+6	26.82
+5	119.2
+4	365.8
+3	1038
+2	2823
+1	8941
+0	26383
+
+
+MapQuest photo: tool tip zoom is URL zoom plus 1; 1 mile is 6.67 SLC blocks
+
+URL
+zoom
+11	279  pix/SLC blk (but you have to click the zoom button; URL doesn't work)
+10	187  (same as above)
+9	120  pix/blk
+8	50.5 pix/blk
+7	22.8 pix/blk
+6	29.2 m/pix
+5	131  m/pix
+4	265  m/pix
+3	1072 m/pix
+2	3075 m/pix
+1	8982 m/pix
+0	27047 m/pix
+
+
+MapTech topographic: scale is consistently based on 160 pix/inch.
+Scales available:
+
+24K
+100K
+250K
+
+
+MapTech aeronautical: scale is consistently based on 160 pix/inch.
+Scales available:
+
+Class B		  1:250,000
+Sectional	  1:500,000
+WAC		1:1,000,000
+
+
+MapTech Nautical: I shall assume that it too is consistently 160 pix/inch.
+
+
+MapPoint:
+
+	actual	actual	scale
+Size	width	height	width
+small	405	320	463
+medium	575	470	657
+large	800	740	920
+
+
+Offroute: map is 323 pixels on a side
+Scales available:
+
+10   miles
+20   miles
+40   miles
+80   miles
+160  miles
+320  miles
+640  miles
+1280 miles
+2560 miles
+5120 miles
