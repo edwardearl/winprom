@@ -162,7 +162,7 @@ void CCycleListView::UpdateItem(int nItem)
 
 void CCycleListView::printFeature(int item, FILE *out_file, Format_style style)
 {
-  const char *style_col=get_delimiter(style,CA_CENTER);
+  const char *style_col=get_delimiter(style,CA_CENTERx);
   if (style==FMS_HTML) fprintf(out_file,style_col);
   Feature& featr=GetFeature(item);
   short int dc=GetDocument()->drain_const();
@@ -231,10 +231,10 @@ void CCycleListView::printHeader(FILE *out_file, Format_style style)
 	  Basin_saddle::walk_risk_hdr,Basin_saddle::WRO_hdr);
   fprintf(out_file,Elev_intvl::field_format,Domain::prom_hdr);
   if (relist_filter.offmap) {
-    fprintf(out_file,get_delimiter(style,CA_CENTER));
+    fprintf(out_file,get_delimiter(style,CA_CENTERx));
     fprintf(out_file,"  OMP");
   }
-  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTER));
+  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTERx));
   CGroupListView::printHeader(out_file,style);
 }
 

@@ -153,11 +153,11 @@ public:
   static Domain *peak_beyond_sadl(Feature *, Feature *);
   static Elevation getUseElev(const Elev_intvl&, Use_elev);
   bool doc_CanClose(const File_state&, const char *, const CString&,
-		    void (CPromDoc::*)(), bool=false);
-  bool em_CanClose(bool=false);
-  bool dm_CanClose(bool=false);
-  bool dt_CanClose(bool=false);
-  bool db_CanClose(bool=false);
+	  void (CPromDoc::*)(), bool = false) const;
+  bool em_CanClose(bool=false) const;
+  bool dm_CanClose(bool=false) const;
+  bool dt_CanClose(bool=false) const;
+  bool db_CanClose(bool=false) const;
   bool em_ScriptCanClose(bool=false) const;
   bool dm_ScriptCanClose(bool=false) const;
   bool dt_ScriptCanClose(bool=false) const;

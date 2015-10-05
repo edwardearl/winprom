@@ -190,9 +190,10 @@ bool CData_dlg::save_records()
   int ivalue;
   float rvalue;
   char *endp;
+  Database::FieldID fid;
 
   // first pass over fields -- validate them
-  for (Database::FieldID fid=document.data.begin_field();
+  for (fid=document.data.begin_field();
        fid!=document.data.end_field(); ++fid,++fld_ndx) {
     value_label[fld_ndx].GetWindowText(value_text);
     switch ((*fid).get_type()) {
@@ -200,7 +201,7 @@ bool CData_dlg::save_records()
       ivalue=strtol(value_text,&endp,10);
       if (*endp!='\0') {
 	sprintf(buf,"Integer format error for field \"%s\"",
-		(*fid).name);
+		std::string((*fid).name).c_str());
 	MessageBox(buf);
 	value_label[fld_ndx].SetFocus();
 	value_label[fld_ndx].SetSel(0,-1);
@@ -211,7 +212,7 @@ bool CData_dlg::save_records()
       rvalue=strtod(value_text,&endp);
       if (*endp!='\0') {
 	sprintf(buf,"Real format error for field \"%s\"",
-		(*fid).name);
+		std::string((*fid).name).c_str());
 	MessageBox(buf);
 	value_label[fld_ndx].SetFocus();
 	value_label[fld_ndx].SetSel(0,-1);

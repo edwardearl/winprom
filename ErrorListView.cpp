@@ -7,6 +7,7 @@
 #include "ErrorAnal_dlg.h"
 #include "ListFrame.h"
 #include <algorithm>
+#include <functional>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -136,11 +137,11 @@ void CErrorListView::printFeature(int item, FILE *out_file,
   Elevation error=error_list[item].error;
   if (error==elev_undef) fprintf(out_file,"     ");
   else fprintf(out_file,Elev_intvl::elem_format,error);
-  fprintf(out_file,get_delimiter(style,CA_RIGHT));
+  fprintf(out_file,get_delimiter(style,CA_RIGHTx));
   error=error_list[item].map_elev;
   if (error==elev_undef) fprintf(out_file,"     ");
   else fprintf(out_file,Elev_intvl::elem_format,error);
-  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTER));
+  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTERx));
   CFeatureListView::printFeature(item,out_file,style);
 }
 
@@ -148,9 +149,9 @@ void CErrorListView::printHeader(FILE *out_file, Format_style style)
 {
   if (style==FMS_HTML) fprintf(out_file,"<TD align=center>");
   fprintf(out_file,"Error");
-  fprintf(out_file,get_delimiter(style,CA_CENTER));
+  fprintf(out_file,get_delimiter(style,CA_CENTERx));
   fprintf(out_file," Map ");
-  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTER));
+  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTERx));
   CFeatureListView::printHeader(out_file,style);
 }
 

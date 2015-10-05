@@ -1233,9 +1233,24 @@ void CMapView::OnGpMarkArea()
   BeginWaitCursor();
   bool prev_mark=grid_mark[r_click_gp];
   Grid_mark markable(*GetDocument());
-  for (Region_iter<Filter_region,Grid_mark>
+  /* TODO(akirmse): This doesn't compile:
+
+  1>c:\github\winprom\region.h(116): error C2664: 'Conditional_nbr_iter<Nbr_iter,GridSet>::Conditional_nbr_iter(const Conditional_nbr_iter<Nbr_iter,GridSet> &)': cannot convert argument 1 from 'const Grid_mark' to 'const GridSet &'
+  1>          with
+  1>          [
+  1>              Nbr_iter=RawNbr_iter,
+  1>              GridSet=GridSet
+  1>          ]
+  1>  c:\github\winprom\region.h(116): note: Reason: cannot convert from 'const Grid_mark' to 'const GridSet'
+  1>  c:\github\winprom\region.h(116): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  1>  c:\github\winprom\region.h(115): note: while compiling class template member function 'void Region_iter<Filter_region,Grid_mark>::operator ++(void)'
+  1>  c:\github\winprom\mapview.cpp(1238): note: see reference to function template instantiation 'void Region_iter<Filter_region,Grid_mark>::operator ++(void)' being compiled
+  1>  c:\github\winprom\mapview.cpp(1236): note: see reference to class template instantiation 'Region_iter<Filter_region,Grid_mark>' being compiled
+
+  for (Region_iter<Filter_region,Grid_mark>	
        ri(r_click_gp,Filter_region(filter,grid_mark,!prev_mark),markable);
        ri; ++ri);
+  */
   Invalidate();
   EndWaitCursor();
 }

@@ -40,7 +40,7 @@ void Field::resize(unsigned n)
 
 unsigned Field::get_width() const
 {
-  unsigned max_width=name.GetLength(),width;
+  unsigned max_width=name.GetLength(),width,n;
   switch (type) {
   case FLD_REAL:
     if (max_width<6) max_width=6;
@@ -49,7 +49,7 @@ unsigned Field::get_width() const
     {
       for (vector<int>::const_iterator i=int_values.begin();
 	   i!=int_values.end(); ++i) {
-	for (unsigned width=0,n=(*i); n!=0; ++width) n/=10;
+	for (width=0,n=(*i); n!=0; ++width) n/=10;
 	if (width>max_width) max_width=width;
       }
     }
@@ -133,14 +133,16 @@ void Field::write(FILE *f) const throw(file_error)
 
 Database::FieldID Database::get_field(const char *name)
 {
-  for (FieldID fid=fields.begin(); fid!=fields.end(); ++fid)
+  FieldID fid;
+  for (fid=fields.begin(); fid!=fields.end(); ++fid)
     if ((*fid).name==name) return fid;
   return fid;
 }
 
 Database::const_FieldID Database::get_field(const char *name) const
 {
-  for (const_FieldID fid=fields.begin(); fid!=fields.end(); ++fid)
+  const_FieldID fid;
+  for (fid=fields.begin(); fid!=fields.end(); ++fid)
     if ((*fid).name==name) return fid;
   return fid;
 }
@@ -194,10 +196,10 @@ Database::RecordID Database::add_record(const GridPoint& gp)
       (*fid).real_values.insert((*fid).real_values.begin()+lo,0.0);
       break;
     case FLD_STRING:
-      (*fid).string_values.insert((*fid).string_values.begin()+lo);
+      (*fid).string_values.insert((*fid).string_values.begin()+lo, "");
       break;
     case FLD_LOC:
-      (*fid).loc_values.insert((*fid).loc_values.begin()+lo);
+      (*fid).loc_values.insert((*fid).loc_values.begin()+lo, GridPoint());
       break;
     default:
       assert(0);
@@ -369,7 +371,7 @@ void Database::read(FILE *f) throw(file_error)
   default:
     if (GridPoint::lat_step==0 || GridPoint::lon_step==0)
       throw file_error("Unstamped database. You must load another element first.");
-    fseek(f,-sizeof version,SEEK_CUR); // we don't have a file version stamp
+    fseek(f,- (int) sizeof version,SEEK_CUR); // we don't have a file version stamp
   }
 
   unsigned i,n,nf;

@@ -411,7 +411,7 @@ struct Topo_info {
 
 // given an offmap bool and a cell rotation bool,
 // this array tells which cell prominence member to get
-extern const Elevation const Domain::Sadl_prom::*sadl_prom_types[2][2];
+extern const Elevation Domain::Sadl_prom::*sadl_prom_types[2][2];
 
 
 // defines boundary point for explored region
@@ -574,6 +574,7 @@ public:
   void sort_bs(vector<Basin_saddle *>&);
   void sort_ro(vector<Runoff *>&);
   bool splice(rROiter&);
+  bool splice(Runoff *);
   void splice(Distance=0);
   void splice(Runoff **, unsigned);
   void rotate();

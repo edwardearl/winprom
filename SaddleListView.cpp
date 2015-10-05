@@ -6,6 +6,7 @@
 #include "SaddleListView.h"
 #include "ListFrame.h"
 #include <algorithm>
+#include <functional>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

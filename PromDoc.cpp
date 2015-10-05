@@ -1226,7 +1226,7 @@ void CPromDoc::OnInfoAll()
 
 bool CPromDoc::doc_CanClose(const File_state& state, const char *title,
 			    const CString& name, void (CPromDoc::*save_fn)(),
-			    bool drastic)
+			    bool drastic) const
 {
   if (state!=CHANGED) return true;
   char *lbuf=buf;
@@ -1246,7 +1246,7 @@ bool CPromDoc::doc_CanClose(const File_state& state, const char *title,
 	  drastic?"Winprom Drastic Change":"Winprom Workspace Changed",
 	  MB_YESNOCANCEL|MB_ICONWARNING)) {
   case IDYES:
-    (this->*save_fn)();
+    (const_cast<CPromDoc *>(this)->*save_fn)();
     return state!=CHANGED;
   case IDNO:
     return true;
@@ -1257,19 +1257,19 @@ bool CPromDoc::doc_CanClose(const File_state& state, const char *title,
   return false;
 }
 
-bool CPromDoc::em_CanClose(bool drastic)
+bool CPromDoc::em_CanClose(bool drastic) const
 {
   return doc_CanClose(em_state,"elevation map",em_name,
 		      &CPromDoc::OnSaveElevMap,drastic);
 }
 
-bool CPromDoc::dm_CanClose(bool drastic)
+bool CPromDoc::dm_CanClose(bool drastic) const
 {
   return doc_CanClose(dm_state,"domain map",dm_name,
 		      &CPromDoc::OnSaveDLPRmap,drastic);
 }
 
-bool CPromDoc::dt_CanClose(bool drastic)
+bool CPromDoc::dt_CanClose(bool drastic) const
 {
   if (!tree_writeable) {
     AfxGetMainWnd()->
@@ -1281,7 +1281,7 @@ bool CPromDoc::dt_CanClose(bool drastic)
 		      &CPromDoc::OnSaveDLPRtree,drastic);
 }
 
-bool CPromDoc::db_CanClose(bool drastic)
+bool CPromDoc::db_CanClose(bool drastic) const
 {
   return doc_CanClose(db_state,"database",db_name,
 		      &CPromDoc::OnSaveDatabase,drastic);
@@ -3205,7 +3205,7 @@ void CPromDoc::execute_command(FILE *file, CScriptCtl_dlg& control)
   else if (!strcmp(cmd_buf,"purge_peaks") || !strcmp(cmd_buf,"purge_peaks_xlate") ||
 	   !strcmp(cmd_buf,"purge_basins") || !strcmp(cmd_buf,"purge_basins_xlate")) {
     Elevation min_prom;
-    fscanf(file,"%d",&min_prom);
+    fscanf(file,"%hd",&min_prom);
     if (dt_state==NOT_LOADED) throw_no_tree(is_drainage);
     if (!dt_ScriptCanClose(true)) throw_drastic(is_drainage);
     if (min_prom<=0) throw script_error(is_drainage?
@@ -3244,7 +3244,7 @@ void CPromDoc::execute_command(FILE *file, CScriptCtl_dlg& control)
   }
   else if (!strcmp(cmd_buf,"purge_bs_prominence")) {
     Elevation min_prom;
-    fscanf(file,"%d",&min_prom);
+    fscanf(file,"%hd",&min_prom);
     if (dt_state==NOT_LOADED) throw_no_tree(is_drainage);
     if (!dt_ScriptCanClose(true)) throw_drastic(is_drainage);
     if (min_prom<=0)
@@ -3932,7 +3932,7 @@ bool CPromDoc::tree_transform(float m, float b, bool xform_peak, bool xform_sadl
     char buf2[32];
     badf->location.sprint(buf2);
     sprintf(buf,"Transformed feature elevation is out of range!\n"
-	    "Location %s, elevation %d",buf2,badf->elev.low,badf->elev.high);
+	    "Location %s, elevation range %d-%d",buf2,badf->elev.low,badf->elev.high);
     AfxGetMainWnd()->MessageBox(buf,"Winprom",MB_OK|MB_ICONERROR);
     return false;
   }
@@ -4115,7 +4115,7 @@ static void undefine_rec_array(Database::RecordID array[], Domain::Index n)
     array[i]=REC_NONE;
 }
 
-static void check_align_pri(const Database& data, Database::FieldID fi,
+static void check_align_pri(const Database& data, Database::const_FieldID fi,
 			    const GridPoint& ftr_loc, short int sign,
 			    Database::RecordID& cur_rec,
 			    Database::RecordID new_rec)
@@ -4125,7 +4125,7 @@ static void check_align_pri(const Database& data, Database::FieldID fi,
     cur_rec=new_rec;
   else {
     // some other record matched the same feature.
-    if (fi==0) {
+    if (fi==data.begin_field()) {
       // use distance to decide which one gets it.
       if (data.get_location(new_rec)-ftr_loc <
 	  data.get_location(cur_rec)-ftr_loc)
@@ -4696,18 +4696,22 @@ void CPromDoc::OnOpTreeShoreline()
 static void import_data(const Database& data, Feature& featr, FT_index ft,
 			const FeatureTypeFilter& filter,
 			bool edited, Saddle::Status ss,
-			Database::FieldID name_fld, Database::FieldID elev_fld)
+			Database::const_FieldID name_fld, Database::const_FieldID elev_fld)
 {
   if (!featr.location || !filter.test(featr,ft,data)) return;
   Database::RecordID rec=data.get_record(featr.location);
   if (rec==REC_NONE) return;
-  if (name_fld) {
+  // NOTE(akirmse): This original code doesn't compile
+  // if (name_fld) {
+  if (true) {
     CString name;
     data.get_value(rec,name_fld,name);
     featr=name;
   }
-  if (elev_fld) {
-    int elev;
+  // NOTE(akirmse): This original code doesn't compile
+  // if (elev_fld) {
+  if (true) {
+	int elev;
     data.get_value(rec,elev_fld,elev);
     featr.elev=elev;
     if (edited) featr.edited=true;
@@ -4727,7 +4731,7 @@ void CPromDoc::OnOpTreeData()
   dlg.m_filter.rec_filter.align(data);
   dlg.m_ps_status=ps_stat;
   dlg.m_bs_status=bs_stat;
-  if (dlg.DoModal()!=IDOK || dlg.name_fld==0 && dlg.elev_fld==0) return;
+  if (dlg.DoModal()!=IDOK || dlg.name_fld==data.begin_field() && dlg.elev_fld==data.begin_field()) return;
 
   import_filter=dlg.m_filter;
   ps_stat=(Saddle::Status)dlg.m_ps_status;

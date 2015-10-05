@@ -63,10 +63,10 @@ BOOL CDataImport_dlg::OnInitDialog()
   for (Database::const_FieldID fi=data.begin_field(); fi!=data.end_field(); ++fi) {
     switch ((*fi).get_type()) {
     case FLD_INTEGER: case FLD_REAL:
-      m_elev_cb.SetItemData(m_elev_cb.AddString((*fi).name),(DWORD)fi);
+      m_elev_cb.SetItemData(m_elev_cb.AddString((*fi).name),fi - data.begin_field());
       break;
     case FLD_STRING:
-      m_name_cb.SetItemData(m_name_cb.AddString((*fi).name),(DWORD)fi);
+      m_name_cb.SetItemData(m_name_cb.AddString((*fi).name),fi - data.begin_field());
       break;
     case FLD_LOC:
       break;
@@ -83,8 +83,8 @@ BOOL CDataImport_dlg::OnInitDialog()
 
 void CDataImport_dlg::OnOK()
 {
-  name_fld=(Database::FieldID)m_name_cb.GetItemData(m_name_cb.GetCurSel());
-  elev_fld=(Database::FieldID)m_elev_cb.GetItemData(m_elev_cb.GetCurSel());
+  name_fld= data.begin_field() + m_name_cb.GetItemData(m_name_cb.GetCurSel());
+  elev_fld= data.begin_field() + m_elev_cb.GetItemData(m_elev_cb.GetCurSel());
 
   CDialog::OnOK();
 }

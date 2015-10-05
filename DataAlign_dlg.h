@@ -34,7 +34,7 @@ public:
   BOOL	m_prom;
   //}}AFX_DATA
   Assoc_info m_assoc;
-  Database::FieldID mrf_peak,mrf_sadl;
+  Database::const_FieldID mrf_peak,mrf_sadl;
 
 // Overrides
   // ClassWizard generated virtual function overrides

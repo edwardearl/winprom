@@ -184,8 +184,8 @@ static const Option_info msr_options[] = {
 // medium 575,470
 // large  800,740
 static const Scale_info msn_world_scales[] = {
-  {113.7,"40 miles"},
-  {190.2,"65 miles"},
+  {113.7f,"40 miles"},
+  {190.2f,"65 miles"},
   {380,"135 miles"},
   {763,"270 miles"},
   {1901,"650 miles"},
@@ -198,13 +198,13 @@ static const Scale_info msn_world_scales[] = {
   {0,0}
 };
 static const Scale_info msn_street_scales[] = {
-  {0.756,"0.25 mile"},
-  {2.283,"0.8 mile"},
-  {4.57,"1.6 miles"},
-  {9.13,"3.2 miles"},
-  {19.01,"6.5 miles"},
-  {38.3,"13.5 miles"},
-  {114.9,"40 miles"},
+  {0.756f,"0.25 mile"},
+  {2.283f,"0.8 mile"},
+  {4.57f,"1.6 miles"},
+  {9.13f,"3.2 miles"},
+  {19.01f,"6.5 miles"},
+  {38.3f,"13.5 miles"},
+  {114.9f,"40 miles"},
   {615,"210 miles"},
   {1538,"540 miles"},
   {5370,"1900 miles"},
@@ -221,17 +221,17 @@ static const Option_info msn_options[] = {
 };
 
 static const Scale_info mapquest_scales[] = {
-  {0.263,"10in/pixel"},	// 16
-  {0.395,"15in/pixel"},	// 15
-  {0.658,"2ft/pixel"},	// 14
-  {1.316,"4ft/pixel"},
-  {2.632,"9ft/pixel"},
-  {5.26,"17ft/pixel"},
-  {10.53,"35ft/pixel"},
-  {21.05,"69ft/pixel"},	// 9
-  {42.1,"140ft/pixel"},
-  {92.1,"300ft/pixel"},
-  {184.2,"600ft/pixel"},
+  {0.263f,"10in/pixel"},	// 16
+  {0.395f,"15in/pixel"},	// 15
+  {0.658f,"2ft/pixel"},	// 14
+  {1.316f,"4ft/pixel"},
+  {2.632f,"9ft/pixel"},
+  {5.26f,"17ft/pixel"},
+  {10.53f,"35ft/pixel"},
+  {21.05f,"69ft/pixel"},	// 9
+  {42.1f,"140ft/pixel"},
+  {92.1f,"300ft/pixel"},
+  {184.2f,"600ft/pixel"},
   {421,"0.26mi/pixel"},
   {934,"0.58mi/pixel"},
   {2763,"1.7mi/pixel"},
@@ -247,19 +247,19 @@ static const Option_info mapquest_options[] = {
 };
 
 static const Scale_info maptech_nautical_scales[] = {
-  {2.50,"1:25,000"},
-  {8.00,"1:80,000"},
-  {20.0,"1:200,000"},
-  {73.7,"1:736,560"},
-  {112.6,"1:1,126,321"},
-  {120.0,"1:1,200,000"},
+  {2.50f,"1:25,000"},
+  {8.00f,"1:80,000"},
+  {20.0f,"1:200,000"},
+  {73.7f,"1:736,560"},
+  {112.6f,"1:1,126,321"},
+  {120.0f,"1:1,200,000"},
   {1772,"1:17,716,535"},
   {0,0}
 };
 static const Scale_info maptech_topo_scales[] = {
-  {2.40,"1:24,000"},
-  {10.0,"1:100,000"},
-  {25.0,"1:250,000"},
+  {2.40f,"1:24,000"},
+  {10.0f,"1:100,000"},
+  {25.0f,"1:250,000"},
   {0,0}
 };
 static const Scale_info maptech_aero_scales[] = {

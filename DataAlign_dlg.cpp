@@ -76,14 +76,14 @@ BOOL CDataAlign_dlg::OnInitDialog()
     if (data.field_type(fi)==FLD_INTEGER || data.field_type(fi)==FLD_REAL) {
       mrc.Format("Min %s",(*fi).name);
       n=m_mult_rec_peak_list.AddString(mrc);
-      m_mult_rec_peak_list.SetItemDataPtr(n,(void *)fi);
+      m_mult_rec_peak_list.SetItemDataPtr(n, (void *) (fi - data.begin_field()));
       n=m_mult_rec_sadl_list.AddString(mrc);
-      m_mult_rec_sadl_list.SetItemDataPtr(n,(void *)fi);
+      m_mult_rec_sadl_list.SetItemDataPtr(n, (void *) (fi - data.begin_field()));
       mrc.Format("Max %s",(*fi).name);
       n=m_mult_rec_peak_list.AddString(mrc);
-      m_mult_rec_peak_list.SetItemDataPtr(n,(void *)fi);
+      m_mult_rec_peak_list.SetItemDataPtr(n, (void *) (fi - data.begin_field()));
       n=m_mult_rec_sadl_list.AddString(mrc);
-      m_mult_rec_sadl_list.SetItemDataPtr(n,(void *)fi);
+      m_mult_rec_sadl_list.SetItemDataPtr(n, (void *) (fi - data.begin_field()));
     }
   }
 
@@ -93,6 +93,6 @@ BOOL CDataAlign_dlg::OnInitDialog()
 void CDataAlign_dlg::OnOK()
 {
   CDialog::OnOK();
-  mrf_peak=(Database::FieldID)m_mult_rec_peak_list.GetItemDataPtr(m_mult_rec_peak);
-  mrf_sadl=(Database::FieldID)m_mult_rec_sadl_list.GetItemDataPtr(m_mult_rec_sadl);
+  mrf_peak= data.begin_field() + ((int) m_mult_rec_peak_list.GetItemDataPtr(m_mult_rec_peak));
+  mrf_sadl= data.begin_field() + ((int) m_mult_rec_sadl_list.GetItemDataPtr(m_mult_rec_sadl));
 }

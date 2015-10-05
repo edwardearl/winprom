@@ -2013,7 +2013,7 @@ void CGraphView::filterTranslateStates(const FeatureTypeFilter& filter,
 {
   state1=ls1;
   state2=ls2;
-  filterModifyStates(filter,filterTranslateState);
+  filterModifyStates(filter, &CGraphView::filterTranslateState);
 }
 
 void CGraphView::OnEditSelectFilterSet()
@@ -2066,7 +2066,7 @@ void CGraphView::OnEditSelectFilterPrecise()
   CFeatureTypeFilter_dlg dlg(filter,GetParent());
   if (dlg.DoModal()==IDOK) {
     zero_select();
-    filterModifyStates(filter,filterPreciseState);
+    filterModifyStates(filter, &CGraphView::filterPreciseState);
   }
 }
 

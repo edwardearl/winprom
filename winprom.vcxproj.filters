@@ -616,6 +616,27 @@
     <ClInclude Include="XferTree_dlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GridPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Domain_anal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="domain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="hlp\winprom.hpj">

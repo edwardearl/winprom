@@ -132,14 +132,14 @@ void CBasinSadlListView::printFeature(int item, FILE *out_file,
   if (style==FMS_HTML) fprintf(out_file,"<TD align=center>");
   bs_list[item].prom.print(out_file);
   if (list_filter.offmap) {
-    fprintf(out_file,get_delimiter(style,CA_RIGHT));
+    fprintf(out_file,get_delimiter(style,CA_RIGHTx));
     if (bs_list[item].offmap_prom==elev_infty)
       fprintf(out_file,"unltd");
     else if (bs_list[item].offmap_prom==-elev_infty)
       fprintf(out_file,"     ");
     else fprintf(out_file,Elev_intvl::elem_format,bs_list[item].offmap_prom);
   }
-  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_RIGHT));
+  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_RIGHTx));
   switch (style) {
   case FMS_FLAG: Basin_saddle::format="%W %O %C B %F"; break;
   case FMS_HTML: Basin_saddle::format=
@@ -158,10 +158,10 @@ void CBasinSadlListView::printHeader(FILE *out_file, Format_style style)
   if (style==FMS_HTML) fprintf(out_file,"<TD align=center>");
   fprintf(out_file,Elev_intvl::field_format,Domain::prom_hdr);
   if (list_filter.offmap) {
-    fprintf(out_file,get_delimiter(style,CA_CENTER));
+    fprintf(out_file,get_delimiter(style,CA_CENTERx));
     fprintf(out_file,"  OMP");
   }
-  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTER));
+  if (style!=FMS_HTML) fprintf(out_file,get_delimiter(style,CA_CENTERx));
   switch (style) {
   case FMS_FLAG: Basin_saddle::format="%W %O %C T %F"; break;
   case FMS_HTML: Basin_saddle::format=

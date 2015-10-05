@@ -402,12 +402,22 @@ void CDataListView::SetViewTitle()
   GetParent()->SetWindowText(t+title);
 }
 
+struct SortInfo {
+	const Database &data;
+	unsigned int index;
+
+	SortInfo(const Database &database, unsigned int index) 
+		: data(database), index(index) {
+	}
+};
+
 static int compare_dir;
 
 static int CALLBACK compare_data_key(LPARAM data1param, LPARAM data2param,
 				     LPARAM datafnparam)
 {
-  const vector<GridPoint>& locations=*(const vector<GridPoint> *)datafnparam;
+  SortInfo *info = (SortInfo *) datafnparam;
+  const vector<GridPoint>& locations = info->data.get_locations();
   if (locations[data1param]<locations[data2param]) return -compare_dir;
   if (locations[data1param]>locations[data2param]) return compare_dir;
   return 0;
@@ -416,14 +426,16 @@ static int CALLBACK compare_data_key(LPARAM data1param, LPARAM data2param,
 static int CALLBACK compare_data_int(LPARAM data1param, LPARAM data2param,
 				     LPARAM datafnparam)
 {
-  const vector<int>& ints=((const Field *)datafnparam)->get_ints();
+  SortInfo *info = (SortInfo *)datafnparam;
+  const vector<int>& ints= (info->data.begin_field() + info->index)->get_ints();
   return (ints[data1param]-ints[data2param])*compare_dir;
 }
 
 static int CALLBACK compare_data_real(LPARAM data1param, LPARAM data2param,
 				      LPARAM datafnparam)
 {
-  const vector<float>& reals=((const Field *)datafnparam)->get_reals();
+  SortInfo *info = (SortInfo *)datafnparam;
+  const vector<float>& reals= (info->data.begin_field() + info->index)->get_reals();
   if (reals[data1param]<reals[data2param]) return -compare_dir;
   if (reals[data1param]>reals[data2param]) return compare_dir;
   return 0;
@@ -432,7 +444,8 @@ static int CALLBACK compare_data_real(LPARAM data1param, LPARAM data2param,
 static int CALLBACK compare_data_string(LPARAM data1param, LPARAM data2param,
 					LPARAM datafnparam)
 {
-  const vector<CString>& strings=((const Field *)datafnparam)->get_strings();
+  SortInfo *info = (SortInfo *)datafnparam;
+  const vector<CString>& strings= (info->data.begin_field() + info->index)->get_strings();
   if (strings[data1param]<strings[data2param]) return -compare_dir;
   if (strings[data1param]>strings[data2param]) return compare_dir;
   return 0;
@@ -441,7 +454,8 @@ static int CALLBACK compare_data_string(LPARAM data1param, LPARAM data2param,
 static int CALLBACK compare_data_loc(LPARAM data1param, LPARAM data2param,
 				     LPARAM datafnparam)
 {
-  const vector<GridPoint>& locations=*(const vector<GridPoint> *)datafnparam;
+  SortInfo *info = (SortInfo *)datafnparam;
+  const vector<GridPoint>& locations= (info->data.begin_field() + info->index)->get_locs();
   if (locations[data1param]<locations[data2param]) return -compare_dir;
   if (locations[data1param]>locations[data2param]) return compare_dir;
   return 0;
@@ -456,27 +470,26 @@ void CDataListView::OnHeaderClick(NMHDR *pNMHDR, LRESULT *pResult)
   if (pNMListView->iSubItem>0) {
     // data field
     unsigned fld_ndx=pNMListView->iSubItem-1;
+
+	SortInfo info(data, fld_ndx);
+
     switch ((*(data.begin_field()+fld_ndx)).get_type()) {
     case FLD_INTEGER:
-      listCtrl.SortItems(compare_data_int,
-	(LPARAM)(data.begin_field()+fld_ndx));
+      listCtrl.SortItems(compare_data_int, (LPARAM) &info);
       break;
     case FLD_REAL:
-      listCtrl.SortItems(compare_data_real,
-	(LPARAM)(data.begin_field()+fld_ndx));
+		listCtrl.SortItems(compare_data_real, (LPARAM) &info);
       break;
     case FLD_STRING:
-      listCtrl.SortItems(compare_data_string,
-	(LPARAM)(data.begin_field()+fld_ndx));
+		listCtrl.SortItems(compare_data_string, (LPARAM) &info);
       break;
     case FLD_LOC:
-      listCtrl.SortItems(compare_data_loc,
-	(LPARAM)(data.begin_field()+fld_ndx));
+		listCtrl.SortItems(compare_data_loc, (LPARAM) &info);
     }
   }
   else {
     // location
-    listCtrl.SortItems(compare_data_key,
+    listCtrl.SortItems(compare_data_key, 
       (LPARAM)(&data.get_locations()));
   }
 
@@ -649,7 +662,7 @@ static unsigned *width;
 void CDataListView::printHeader(FILE *out_file, const Database& data,
 				Format_style style) const
 {
-  const char *style_del=get_delimiter(style,CA_CENTER);
+  const char *style_del=get_delimiter(style,CA_CENTERx);
   Field_type ft;
   list_fmt.set(style==FMS_CSV);
   width=new unsigned[data.get_nrec()];
@@ -671,8 +684,8 @@ void CDataListView::printRecord(int item, FILE *out_file, const Database& data,
   static float real_val;
   static CString string_val;
   static GridPoint loc_val;
-  const char *style_del_left=get_delimiter(style,CA_LEFT),
-    *style_del_right=get_delimiter(style,CA_RIGHT);
+  const char *style_del_left=get_delimiter(style,CA_LEFTx),
+    *style_del_right=get_delimiter(style,CA_RIGHTx);
   list_fmt.set(style==FMS_CSV);
   if (style==FMS_HTML) fprintf(out_file,style_del_right);
   Database::RecordID rid=GetListCtrl().GetItemData(item);
@@ -690,7 +703,7 @@ void CDataListView::printRecord(int item, FILE *out_file, const Database& data,
       break;
     case FLD_STRING:
       data.get_value(rid,fid,string_val);
-      fprintf(out_file,"%s%-*s",style_del_left,width[fid-bf],string_val);
+      fprintf(out_file,"%s%-*s",style_del_left,width[fid-bf], std::string(string_val).c_str());
       break;
     case FLD_LOC:
       data.get_value(rid,fid,loc_val);

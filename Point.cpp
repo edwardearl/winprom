@@ -112,7 +112,7 @@ Feature& Feature::operator=(const Topo_point& tp)
 Feature& Feature::operator=(const char *n)
 {
   delete[] name;
-  if (n && *n) name=strdup(n);
+  if (n && *n) name=_strdup(n);
   else name=0;
   return *this;
 }
@@ -122,7 +122,7 @@ Feature& Feature::operator=(const Feature& ftr)
   if (&ftr!=this) {
     (Topo_point&)(*this)=ftr;
     delete[] name;
-    name=strdup(ftr.name);
+    name=_strdup(ftr.name);
     edited=ftr.edited;
     edge_effect=ftr.edge_effect;
   }
@@ -150,7 +150,7 @@ void Feature::set_range(Elevation new_range)
 
 void Feature::edit(const Feature& a)
 {
-  if (a.name!=0 && name==0) name=strdup(a.name);
+  if (a.name!=0 && name==0) name=_strdup(a.name);
   if (edited==a.edited) elev|=a.elev;
   else if (a.edited) {
     elev=a.elev;
@@ -181,11 +181,11 @@ void Feature::read(FILE *f) throw(file_error)
   }
   delete[] name;
   if (buffer[i]=='\0') {
-    name=i>0?strdup(buffer):0;
+    name=i>0?_strdup(buffer):0;
     return;
   }
   buffer[i]='\0';
-  name=i>0?strdup(buffer):0;
+  name=i>0?_strdup(buffer):0;
   i=0;
   while (buffer[i]=getc(f), buffer[i]!='\0') {
     if (buffer[i]==EOF) throw file_error();
@@ -268,7 +268,7 @@ char *Feature::sprint(char *buf) const
 	  buf=elev.sprint(buf);
 	  break;
 	default:
-	  fprintf(stderr,"Feature %A format error! (%c)\n",*fc);
+	  fprintf(stderr,"Feature format error! (%c)\n",*fc);
 	  abort();
 	}
 	break;
@@ -365,7 +365,7 @@ void Feature::print_header(FILE *f)
 	  Elev_intvl::print_header(f);
 	  break;
 	default:
-	  fprintf(stderr,"Feature %A format error! (%c)\n",*fc);
+	  fprintf(stderr,"Feature format error! (%c)\n",*fc);
 	  abort();
 	}
 	break;

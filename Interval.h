@@ -172,7 +172,7 @@ char *Interval<T>::sprint(char *buf) const
 	*(buf++)='%';
 	break;
       default:
-	fprintf(stderr,"Interval format error! (%c)\n",fc);
+	fprintf(stderr,"Interval format error! (%c)\n", *fc);
 	assert(0);
       }
     }

@@ -59,10 +59,10 @@ struct Feature: public Topo_point {
   Feature(const GridPoint& l, const Elev_intvl& e) :
     Topo_point(l,e),name(0),edited(!l),edge_effect(false) {}
   Feature(const Topo_point& tp, const char *n=0) :
-    Topo_point(tp),name(strdup(n)),edited(!tp.location),
+    Topo_point(tp),name(_strdup(n)),edited(!tp.location),
     edge_effect(false) {}
   Feature(const Feature& ftr) : Topo_point(ftr),
-    name(strdup(ftr.name)),edited(ftr.edited),
+    name(_strdup(ftr.name)),edited(ftr.edited),
     edge_effect(ftr.edge_effect) {}
   ~Feature() {delete[] name;}
   Feature& operator=(const Topo_point&);

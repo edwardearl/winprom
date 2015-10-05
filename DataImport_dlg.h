@@ -20,7 +20,7 @@ class CDataImport_dlg : public CDialog
 // Construction
 public:
   CDataImport_dlg(const Database&, CWnd* pParent = NULL);   // standard constructor
-  Database::FieldID name_fld,elev_fld;
+  Database::const_FieldID name_fld,elev_fld;
 
 // Dialog Data
   //{{AFX_DATA(CDataImport_dlg)

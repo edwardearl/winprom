@@ -3153,7 +3153,9 @@ void Divide_tree::update_sadl_prom_info(bool use_ss)
     sp.onmap=sp.offmap=elev_undef;
     doms[i].ridge.cycle_prom=doms[i].ridge.cycle_offmap=-elev_infty;
   }
-  sort(sorted.begin(),sorted.end(),Cmp_peak_index(&doms.front(),HI_END));
+  if (!sorted.empty()) {
+	  sort(sorted.begin(), sorted.end(), Cmp_peak_index(&doms.front(), HI_END));
+  }
   Index nu=sorted.size();
   for (i=0; i<nu; ++i) rank[sorted[i]]=i;
 
@@ -3256,7 +3258,7 @@ void Divide_tree::update_peak_prom_info()
   update_runoff_prom_info();
 }
 
-const Elevation const Domain::Sadl_prom::*sadl_prom_types[2][2] = {
+const Elevation Domain::Sadl_prom::*sadl_prom_types[2][2] = {
   {&Domain::Sadl_prom::onmap,	&Domain::Sadl_prom::cr_onmap},
   {&Domain::Sadl_prom::offmap,	&Domain::Sadl_prom::cr_offmap}
 };
@@ -3323,7 +3325,10 @@ void Divide_tree::update_ridge_info(bool use_ss)
     else dom_scr.nnbr=0;
   }
   // truncate endpoints, one by one.
-  Domain *dom_base=&doms.front(),*so,*d,*pat;
+  Domain *dom_base,*so,*d,*pat;
+  if (!doms.empty()) {
+	  dom_base = &doms.front();
+  }
   for (i=0; i<n; ++i) {
     j=i;
     while (scratch[j].nnbr==1 && scratch[j].peak_prom<elev_infty) {
@@ -3908,6 +3913,35 @@ bool Divide_tree::splice(rROiter& roi)
   }
   return status;
 }
+
+// splice a contiguous sequence of runoffs
+// it is assumed that the basin saddle vector already has enough capacity
+// to hold the new ones
+// NOTE(akirmse): Added this function to fix an improper use of a vector
+// pointer as an iterator at promdoc.cpp:2651.
+bool Divide_tree::splice(Runoff *ro)
+{
+	bool status = false;
+#ifdef _DEBUG
+	writing = this;
+#endif
+	rROiter roj;
+	for (roj = runoffs.begin(); roj != runoffs.end(); ++roj) {
+		if (roj->location == ro->location) {
+			Basin_saddle bs;
+			(*roj).splice(*ro, bs);
+			status = true;
+			if (bs && !bs.edge_effect) {
+				bsnsdls.push_back(bs);
+				bs.peak1->add_nbr(&bsnsdls.back());
+				bs.peak2->add_nbr(&bsnsdls.back());
+			}
+		}
+	}
+
+	return status;
+}
+
 
 void Divide_tree::splice(Distance)
 {
@@ -4515,7 +4549,7 @@ void Divide_tree::read(FILE *f) throw(file_error,bad_alloc)
   case VERSION_FS:
     Saddle::distance_io=true;
     break;
-  default: fseek(f,-sizeof version,SEEK_CUR); // we don't have a file version stamp
+  default: fseek(f, -(int) sizeof version,SEEK_CUR); // we don't have a file version stamp
   }
   GridPoint::read_stamp(f);
   reading=this;
