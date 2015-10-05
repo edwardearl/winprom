@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_GRIDVIEW_DLG_H__306C823D_2DDC_42B7_A775_EB56509BCF15__INCLUDED_)
 #define AFX_GRIDVIEW_DLG_H__306C823D_2DDC_42B7_A775_EB56509BCF15__INCLUDED_
 

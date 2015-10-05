@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_TREEFRAME_H__D6E36D80_28A9_11D4_8FA1_0040056FBD08__INCLUDED_)
 #define AFX_TREEFRAME_H__D6E36D80_28A9_11D4_8FA1_0040056FBD08__INCLUDED_
 

@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_PURGEPEAK_DLG_H__3B3B542A_8FE9_4366_AEF2_B64864BB6606__INCLUDED_)
 #define AFX_PURGEPEAK_DLG_H__3B3B542A_8FE9_4366_AEF2_B64864BB6606__INCLUDED_
 

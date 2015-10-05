@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_ELEVMAPINFO_DLG_H__E2B9D152_E373_4276_93FE_073E2E3CD229__INCLUDED_)
 #define AFX_ELEVMAPINFO_DLG_H__E2B9D152_E373_4276_93FE_073E2E3CD229__INCLUDED_
 

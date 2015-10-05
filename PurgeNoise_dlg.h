@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_PURGENOISE_DLG_H__B0C31460_08C4_46E1_89C4_4C2426A5CA20__INCLUDED_)
 #define AFX_PURGENOISE_DLG_H__B0C31460_08C4_46E1_89C4_4C2426A5CA20__INCLUDED_
 

@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_PROMRULERBAR_H__A9FEC600_36D4_11D4_8FA1_0040056FBD08__INCLUDED_)
 #define AFX_PROMRULERBAR_H__A9FEC600_36D4_11D4_8FA1_0040056FBD08__INCLUDED_
 

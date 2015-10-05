@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_NOISESUM_DLG_H__D74CAC45_3553_4F6E_9EAC_BCBADCA5F9C3__INCLUDED_)
 #define AFX_NOISESUM_DLG_H__D74CAC45_3553_4F6E_9EAC_BCBADCA5F9C3__INCLUDED_
 

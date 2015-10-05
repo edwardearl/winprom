@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_DATALISTSUMMARY_DLG_H__7E146AE0_C804_11D6_A23A_108452C10000__INCLUDED_)
 #define AFX_DATALISTSUMMARY_DLG_H__7E146AE0_C804_11D6_A23A_108452C10000__INCLUDED_
 

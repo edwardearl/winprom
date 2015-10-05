@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_ERRORLISTVIEW_H__ECD6E800_88CC_11D4_8FA2_0040056FBD08__INCLUDED_)
 #define AFX_ERRORLISTVIEW_H__ECD6E800_88CC_11D4_8FA2_0040056FBD08__INCLUDED_
 

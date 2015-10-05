@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 /***********************************************************************
   FILE: GridPoint.cpp
   Copyright (C) 1998 by Edward Earl

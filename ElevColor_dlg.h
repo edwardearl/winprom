@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_ELEVCOLOR_DLG_H__995454D8_91C9_4BD1_A7F1_7AB338B27BDA__INCLUDED_)
 #define AFX_ELEVCOLOR_DLG_H__995454D8_91C9_4BD1_A7F1_7AB338B27BDA__INCLUDED_
 

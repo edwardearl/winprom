@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_PRINTMAP_DLG_H__E8C82CE0_CD32_11D6_A23A_00A447C10404__INCLUDED_)
 #define AFX_PRINTMAP_DLG_H__E8C82CE0_CD32_11D6_A23A_00A447C10404__INCLUDED_
 

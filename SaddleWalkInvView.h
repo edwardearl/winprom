@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_SADDLEWALKINVVIEW_H__0C39D2A0_D6AD_11D5_A238_308352C10000__INCLUDED_)
 #define AFX_SADDLEWALKINVVIEW_H__0C39D2A0_D6AD_11D5_A238_308352C10000__INCLUDED_
 

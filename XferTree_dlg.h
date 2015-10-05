@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_XFERTREE_DLG_H__5792FFA0_0BA1_11D6_A238_D09C52C10000__INCLUDED_)
 #define AFX_XFERTREE_DLG_H__5792FFA0_0BA1_11D6_A238_D09C52C10000__INCLUDED_
 

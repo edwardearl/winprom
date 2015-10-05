@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_SHORELINE_DLG_H__BC1E56A0_37DB_11D8_A23A_E0C843C10000__INCLUDED_)
 #define AFX_SHORELINE_DLG_H__BC1E56A0_37DB_11D8_A23A_E0C843C10000__INCLUDED_
 

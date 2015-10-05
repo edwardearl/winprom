@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_FREEHEIGHTPARAM_DLG_H__CBDCE52E_6D02_49D7_86F7_ABAC1FF6F07A__INCLUDED_)
 #define AFX_FREEHEIGHTPARAM_DLG_H__CBDCE52E_6D02_49D7_86F7_ABAC1FF6F07A__INCLUDED_
 

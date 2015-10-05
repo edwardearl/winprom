@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_RIDGEVIEW_DLG_H__DDF68495_BEC1_4E36_A726_29E97D93EDA3__INCLUDED_)
 #define AFX_RIDGEVIEW_DLG_H__DDF68495_BEC1_4E36_A726_29E97D93EDA3__INCLUDED_
 

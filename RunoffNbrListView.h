@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_RUNOFFNBRLISTVIEW_H__9B338F66_009D_11D4_8FA0_0040056FBD08__INCLUDED_)
 #define AFX_RUNOFFNBRLISTVIEW_H__9B338F66_009D_11D4_8FA0_0040056FBD08__INCLUDED_
 

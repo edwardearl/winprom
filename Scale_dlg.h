@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_SCALE_DLG_H__2F724BDA_4324_4201_9C76_F2F5028D6112__INCLUDED_)
 #define AFX_SCALE_DLG_H__2F724BDA_4324_4201_9C76_F2F5028D6112__INCLUDED_
 
