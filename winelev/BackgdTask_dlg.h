@@ -1,3 +1,9 @@
+// WinProm Copyright 2015 Edward Earl
+// All rights reserved.
+//
+// This software is distributed under a license that is described in
+// the LICENSE file that accompanies it.
+//
 #if !defined(AFX_BACKGDTASK_DLG_H__99468940_7622_11D5_A238_509152C10000__INCLUDED_)
 #define AFX_BACKGDTASK_DLG_H__99468940_7622_11D5_A238_509152C10000__INCLUDED_
 
