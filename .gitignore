@@ -1,10 +1,13 @@
+**/Debug/*
+**/Release/*
+**/Distribute/*
 Debug/*
 Release/*
+Distribute/*
 .vs/*
 *.suo
 *.ncb
 *.aps
-Distribute/*
 *.sdf
 ipch/*
 *.opensdf

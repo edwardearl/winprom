@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winelev", "winelev.vcxproj", "{14E78227-B427-4118-A95B-D7AB1C7E6F86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Distribute|x86 = Distribute|x86
+		Release|x86 = Release|x86
+		Template|x86 = Template|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Debug|x86.ActiveCfg = Debug|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Debug|x86.Build.0 = Debug|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Distribute|x86.ActiveCfg = Distribute|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Distribute|x86.Build.0 = Distribute|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Release|x86.ActiveCfg = Release|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Release|x86.Build.0 = Release|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Template|x86.ActiveCfg = Template|Win32
+		{14E78227-B427-4118-A95B-D7AB1C7E6F86}.Template|x86.Build.0 = Template|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

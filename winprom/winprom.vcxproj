@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Distribute|Win32">
+      <Configuration>Distribute</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{DB6E8C11-C5E6-0DB2-5B2C-6C5683CF1290}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <OutDir>.\Distribute\</OutDir>
+    <IntDir>.\Distribute\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;io_support;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Distribute\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Distribute\winprom.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Distribute\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Distribute\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4290;4244;4018</DisableSpecificWarnings>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Distribute\winprom.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Distribute\winprom.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>.\Distribute\winprom.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>_DEBUG;administrator;WIN32;_WINDOWS;io_support;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\winprom.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4290;4244;4018</DisableSpecificWarnings>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\winprom.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\winprom.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\winprom.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;administrator;WIN32;_WINDOWS;io_support;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\winprom.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4290;4244;4018</DisableSpecificWarnings>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\winprom.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\winprom.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>.\Release\winprom.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <DisableSpecificWarnings>4290;4244;4018</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AnalyzeCtl_dlg.cpp" />
+    <ClCompile Include="Assoc_dlg.cpp" />
+    <ClCompile Include="BackgdTask_dlg.cpp" />
+    <ClCompile Include="BasinSadlListView.cpp" />
+    <ClCompile Include="BrowseFormat_dlg.cpp" />
+    <ClCompile Include="ColorBox.cpp" />
+    <ClCompile Include="Contour_dlg.cpp" />
+    <ClCompile Include="Crop_dlg.cpp" />
+    <ClCompile Include="CutoffOnly_dlg.cpp" />
+    <ClCompile Include="CycleListView.cpp" />
+    <ClCompile Include="CycleSadl_dlg.cpp" />
+    <ClCompile Include="Data_dlg.cpp" />
+    <ClCompile Include="DataAlign_dlg.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="DataFilter_dlg.cpp" />
+    <ClCompile Include="DataFrame.cpp" />
+    <ClCompile Include="DataImport_dlg.cpp" />
+    <ClCompile Include="DataInfo_dlg.cpp" />
+    <ClCompile Include="DataListSummary_dlg.cpp" />
+    <ClCompile Include="DataListView.cpp" />
+    <ClCompile Include="DataLocationFilter_dlg.cpp" />
+    <ClCompile Include="DefineFlat_dlg.cpp" />
+    <ClCompile Include="Domain.cpp" />
+    <ClCompile Include="Domain_anal.cpp" />
+    <ClCompile Include="DomainView_dlg.cpp" />
+    <ClCompile Include="DomapInfo_dlg.cpp" />
+    <ClCompile Include="ElevColor_dlg.cpp" />
+    <ClCompile Include="ElevConflict_dlg.cpp" />
+    <ClCompile Include="ElevMapInfo_dlg.cpp" />
+    <ClCompile Include="ElevRect_dlg.cpp" />
+    <ClCompile Include="ErrorAnal_dlg.cpp" />
+    <ClCompile Include="ErrorFilter_dlg.cpp" />
+    <ClCompile Include="ErrorListView.cpp" />
+    <ClCompile Include="ErrorParam_dlg.cpp" />
+    <ClCompile Include="FeatureEdit_dlg.cpp" />
+    <ClCompile Include="FeatureFilter_dlg.cpp" />
+    <ClCompile Include="FeatureFmt_dlg.cpp" />
+    <ClCompile Include="FeatureListSummary_dlg.cpp" />
+    <ClCompile Include="FeatureListView.cpp" />
+    <ClCompile Include="FeatureTypeFilter_dlg.cpp" />
+    <ClCompile Include="FeatureView_dlg.cpp" />
+    <ClCompile Include="Fields_dlg.cpp" />
+    <ClCompile Include="FreeHeight_dlg.cpp" />
+    <ClCompile Include="FreeHeightParam_dlg.cpp" />
+    <ClCompile Include="GenericListView.cpp" />
+    <ClCompile Include="GraphFrame.cpp" />
+    <ClCompile Include="GraphView.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="GridPoint.cpp" />
+    <ClCompile Include="GridPointFilter_dlg.cpp" />
+    <ClCompile Include="GridView_dlg.cpp" />
+    <ClCompile Include="GroupListView.cpp" />
+    <ClCompile Include="IdentifyFeature_dlg.cpp" />
+    <ClCompile Include="Imparam_dlg.cpp" />
+    <ClCompile Include="ImpOut_dlg.cpp" />
+    <ClCompile Include="ListFilter_dlg.cpp" />
+    <ClCompile Include="ListFrame.cpp" />
+    <ClCompile Include="ListSadl_dlg.cpp" />
+    <ClCompile Include="LocationFmt_dlg.cpp" />
+    <ClCompile Include="LPRtreeView.cpp" />
+    <ClCompile Include="MapInfo_dlg.cpp" />
+    <ClCompile Include="MapView.cpp" />
+    <ClCompile Include="NoiseSum_dlg.cpp" />
+    <ClCompile Include="ParentListView.cpp" />
+    <ClCompile Include="ParentType_dlg.cpp" />
+    <ClCompile Include="PeakListView.cpp" />
+    <ClCompile Include="PeakNbrListView.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="PrintMap_dlg.cpp" />
+    <ClCompile Include="ProfileFrame.cpp" />
+    <ClCompile Include="ProfileParam_dlg.cpp" />
+    <ClCompile Include="ProfileView.cpp" />
+    <ClCompile Include="PromCutoff_dlg.cpp" />
+    <ClCompile Include="PromDoc.cpp" />
+    <ClCompile Include="PromFrame.cpp" />
+    <ClCompile Include="PromRulerBar.cpp" />
+    <ClCompile Include="PromSadl_dlg.cpp" />
+    <ClCompile Include="PromSadlListView.cpp" />
+    <ClCompile Include="Purge_dlg.cpp" />
+    <ClCompile Include="PurgeDomain_dlg.cpp" />
+    <ClCompile Include="PurgeNoise_dlg.cpp" />
+    <ClCompile Include="Relief_dlg.cpp" />
+    <ClCompile Include="RidgeView_dlg.cpp" />
+    <ClCompile Include="RQFinfo_dlg.cpp" />
+    <ClCompile Include="RulerBar.cpp" />
+    <ClCompile Include="RunoffList_dlg.cpp" />
+    <ClCompile Include="RunoffListView.cpp" />
+    <ClCompile Include="RunoffNbr_dlg.cpp" />
+    <ClCompile Include="RunoffNbrListView.cpp" />
+    <ClCompile Include="SaddleListView.cpp" />
+    <ClCompile Include="SaddleWalkInvView.cpp" />
+    <ClCompile Include="Scale_dlg.cpp" />
+    <ClCompile Include="ScriptCtl_dlg.cpp" />
+    <ClCompile Include="SetLocation_dlg.cpp" />
+    <ClCompile Include="SetProfile_dlg.cpp" />
+    <ClCompile Include="Shoreline_dlg.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="StatOptions_dlg.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Distribute|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SWI_dlg.cpp" />
+    <ClCompile Include="Transform_dlg.cpp" />
+    <ClCompile Include="TransformTree_dlg.cpp" />
+    <ClCompile Include="TransPal_dlg.cpp" />
+    <ClCompile Include="TreeFilter_dlg.cpp" />
+    <ClCompile Include="TreeFrame.cpp" />
+    <ClCompile Include="TreeInfo_dlg.cpp" />
+    <ClCompile Include="TreePaste_dlg.cpp" />
+    <ClCompile Include="TreeSelectFilter_dlg.cpp" />
+    <ClCompile Include="WalkListView.cpp" />
+    <ClCompile Include="winprom.cpp" />
+    <ClCompile Include="WSinfo_dlg.cpp" />
+    <ClCompile Include="XferTree_dlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="hlp\winprom.hpj">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\basin.ico" />
+    <CustomBuild Include="res\Basin_saddle.ico" />
+    <CustomBuild Include="res\basinsadl_list.ico" />
+    <CustomBuild Include="res\bitmap1.bmp" />
+    <CustomBuild Include="res\browse.ico" />
+    <CustomBuild Include="res\browser.bmp" />
+    <CustomBuild Include="res\csv.bmp" />
+    <CustomBuild Include="res\csv.ico" />
+    <CustomBuild Include="res\cycle.ico" />
+    <CustomBuild Include="res\DataList.bmp" />
+    <CustomBuild Include="res\dlpr.ico" />
+    <CustomBuild Include="res\edge.ico" />
+    <CustomBuild Include="res\Elev.ico" />
+    <CustomBuild Include="res\FeatureList.bmp" />
+    <CustomBuild Include="res\file_tb.bmp" />
+    <CustomBuild Include="res\graph_drain.bmp" />
+    <CustomBuild Include="res\graphtype.bmp" />
+    <CustomBuild Include="res\html.bmp" />
+    <CustomBuild Include="res\ico00001.ico" />
+    <CustomBuild Include="res\icon1.ico" />
+    <CustomBuild Include="res\idr_data.ico" />
+    <CustomBuild Include="res\idr_mai.ico" />
+    <CustomBuild Include="res\idr_main.ico" />
+    <CustomBuild Include="res\LPRtree.bmp" />
+    <CustomBuild Include="res\mixed.ico" />
+    <CustomBuild Include="res\mixed_drain.ico" />
+    <CustomBuild Include="res\noedit.ico" />
+    <CustomBuild Include="res\noedit_edge.ico" />
+    <CustomBuild Include="res\offmap.ico" />
+    <CustomBuild Include="res\Peak.ico" />
+    <CustomBuild Include="res\Prom.ico" />
+    <CustomBuild Include="res\PromIslandTree.bmp" />
+    <CustomBuild Include="res\promsadl_list.ico" />
+    <CustomBuild Include="res\runoff.ico" />
+    <CustomBuild Include="res\runoff1.ico" />
+    <CustomBuild Include="res\Saddle.ico" />
+    <CustomBuild Include="res\sbro.ico" />
+    <CustomBuild Include="res\splash.bmp" />
+    <CustomBuild Include="res\text.bmp" />
+    <CustomBuild Include="res\text.ico" />
+    <CustomBuild Include="res\Toolbar.bmp" />
+    <CustomBuild Include="res\toolbar1.bmp" />
+    <CustomBuild Include="res\winprom.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="hlp\AfxCore.rtf">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="hlp\AfxPrint.rtf">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="hlp\AppExit.bmp" />
+    <CustomBuild Include="hlp\Bullet.bmp" />
+    <CustomBuild Include="hlp\CurArw2.bmp" />
+    <CustomBuild Include="hlp\CurArw4.bmp" />
+    <CustomBuild Include="hlp\CurHelp.bmp" />
+    <CustomBuild Include="hlp\EditCopy.bmp" />
+    <CustomBuild Include="hlp\EditCut.bmp" />
+    <CustomBuild Include="hlp\EditPast.bmp" />
+    <CustomBuild Include="hlp\EditUndo.bmp" />
+    <CustomBuild Include="hlp\FileNew.bmp" />
+    <CustomBuild Include="hlp\FileOpen.bmp" />
+    <CustomBuild Include="hlp\FilePrnt.bmp" />
+    <CustomBuild Include="hlp\FileSave.bmp" />
+    <CustomBuild Include="hlp\HlpSBar.bmp" />
+    <CustomBuild Include="hlp\HlpTBar.bmp" />
+    <CustomBuild Include="MakeHelp.bat">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="hlp\RecFirst.bmp" />
+    <CustomBuild Include="hlp\RecLast.bmp" />
+    <CustomBuild Include="hlp\RecNext.bmp" />
+    <CustomBuild Include="hlp\RecPrev.bmp" />
+    <CustomBuild Include="hlp\Scmax.bmp" />
+    <CustomBuild Include="hlp\ScMenu.bmp" />
+    <CustomBuild Include="hlp\Scmin.bmp" />
+    <CustomBuild Include="hlp\winprom.cnt">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+    <CustomBuild Include="winprom.reg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="winprom.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnalyzeCtl_dlg.h" />
+    <ClInclude Include="Area_info.h" />
+    <ClInclude Include="BrowseFormat_dlg.h" />
+    <ClInclude Include="BrowserFrame.h" />
+    <ClInclude Include="Contour_dlg.h" />
+    <ClInclude Include="Crop_dlg.h" />
+    <ClInclude Include="CutoffOnly_dlg.h" />
+    <ClInclude Include="CycleSadl_dlg.h" />
+    <ClInclude Include="Data_dlg.h" />
+    <ClInclude Include="DataAlign_dlg.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="DataFilter_dlg.h" />
+    <ClInclude Include="DataImport_dlg.h" />
+    <ClInclude Include="DataInfo_dlg.h" />
+    <ClInclude Include="DataListSummary_dlg.h" />
+    <ClInclude Include="DataListView.h" />
+    <ClInclude Include="DataLocationFilter_dlg.h" />
+    <ClInclude Include="DefineFlat_dlg.h" />
+    <ClInclude Include="domain.h" />
+    <ClInclude Include="DomainView_dlg.h" />
+    <ClInclude Include="Domain_anal.h" />
+    <ClInclude Include="DomapInfo_dlg.h" />
+    <ClInclude Include="EditedList_dlg.h" />
+    <ClInclude Include="ElevColor_dlg.h" />
+    <ClInclude Include="ElevConflict_dlg.h" />
+    <ClInclude Include="ElevMapInfo_dlg.h" />
+    <ClInclude Include="ErrorAnal_dlg.h" />
+    <ClInclude Include="ErrorParam_dlg.h" />
+    <ClInclude Include="FeatureEdit_dlg.h" />
+    <ClInclude Include="FeatureFilter_dlg.h" />
+    <ClInclude Include="FeatureFmt_dlg.h" />
+    <ClInclude Include="FeatureListSummary_dlg.h" />
+    <ClInclude Include="FeatureListView.h" />
+    <ClInclude Include="FeatureTypeFilter_dlg.h" />
+    <ClInclude Include="FeatureView_dlg.h" />
+    <ClInclude Include="Fields_dlg.h" />
+    <ClInclude Include="Format.h" />
+    <ClInclude Include="FreeHeightParam_dlg.h" />
+    <ClInclude Include="GenericListView.h" />
+    <ClInclude Include="graphview.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="GridPoint.h" />
+    <ClInclude Include="GridPointFilter_dlg.h" />
+    <ClInclude Include="GridView_dlg.h" />
+    <ClInclude Include="Grid_map.h" />
+    <ClInclude Include="GroupListView.h" />
+    <ClInclude Include="Imparam_dlg.h" />
+    <ClInclude Include="ImpOut_dlg.h" />
+    <ClInclude Include="ListFilter_dlg.h" />
+    <ClInclude Include="ListFrame.h" />
+    <ClInclude Include="MapInfo_dlg.h" />
+    <ClInclude Include="MapView.h" />
+    <ClInclude Include="NoiseSum_dlg.h" />
+    <ClInclude Include="ParentListView.h" />
+    <ClInclude Include="ParentType_dlg.h" />
+    <ClInclude Include="PeakListView.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="PrintMap_dlg.h" />
+    <ClInclude Include="ProfileParam_dlg.h" />
+    <ClInclude Include="ProfileView.h" />
+    <ClInclude Include="PromCutoff_dlg.h" />
+    <ClInclude Include="PromDoc.h" />
+    <ClInclude Include="PromFrame.h" />
+    <ClInclude Include="PromSadlListView.h" />
+    <ClInclude Include="PurgeDomain_dlg.h" />
+    <ClInclude Include="PurgeNoise_dlg.h" />
+    <ClInclude Include="Relief_dlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RidgeView_dlg.h" />
+    <ClInclude Include="RQFinfo_dlg.h" />
+    <ClInclude Include="RunoffList_dlg.h" />
+    <ClInclude Include="RunoffListView.h" />
+    <ClInclude Include="RunoffNbr_dlg.h" />
+    <ClInclude Include="RunoffNbrListView.h" />
+    <ClInclude Include="SaddleListView.h" />
+    <ClInclude Include="SaddleWalkInvView.h" />
+    <ClInclude Include="Scale_dlg.h" />
+    <ClInclude Include="ScriptCtl_dlg.h" />
+    <ClInclude Include="Shoreline_dlg.h" />
+    <ClInclude Include="StatOptions_dlg.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SWI_dlg.h" />
+    <ClInclude Include="Transform_dlg.h" />
+    <ClInclude Include="TransformTree_dlg.h" />
+    <ClInclude Include="TransPal_dlg.h" />
+    <ClInclude Include="TreeFrame.h" />
+    <ClInclude Include="TreeInfo_dlg.h" />
+    <ClInclude Include="TreePaste_dlg.h" />
+    <ClInclude Include="WalkListView.h" />
+    <ClInclude Include="winprom.h" />
+    <ClInclude Include="WSinfo_dlg.h" />
+    <ClInclude Include="XferTree_dlg.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
